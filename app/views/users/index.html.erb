@@ -1,0 +1,17 @@
+<h1>Users</h1>
+
+<table>
+  <tr>
+    <th>image</th>
+    <th>name</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+  <td><%= attachment_image_tag user, :profile_image, :fill, 20, 20, format: 'jpeg' %></td>
+  <td><%= user.name %></td>
+  <td><%= link_to "show", user_path(user.id) %></td>
+  </tr>
+<% end %>
+
+</table>
