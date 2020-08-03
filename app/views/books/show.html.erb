@@ -1,10 +1,15 @@
+<%= render "users/list", user: @user, book: @book %>
+
 <h1>Book detail</h1>
 
 <% @books.each do |book| %>
 
-<%= book.title %>
-<%= book.body %>
+  <%= book.title %>
+  <%= book.body %>
 
-<%= link_to "Edit", edit_book_path(book.id) %>
-<%= link_to "Destroy", book_path(book.id), method: :delete, data: {confirm: "本当に消しますか？"} %>
+  <% if @user.id == current_user.id %>
+    <%= link_to "Edit", edit_book_path(book.id) %>
+  <% end %>
+    <%= link_to "Destroy", book_path(book.id), method: :delete, data: {confirm: "本当に消しますか？"} %>
+
 <% end %>
