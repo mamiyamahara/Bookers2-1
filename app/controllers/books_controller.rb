@@ -6,6 +6,7 @@ class BooksController < ApplicationController
       @book = Book.new(book_params)
       @book.user_id = current_user.id
     if @book.save
+      flash[:notice] = "You have updated book successfully."
       redirect_to book_path(@book.id)
     else
       @books = Book.all

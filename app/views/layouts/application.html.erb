@@ -48,7 +48,9 @@
        </nav>
     </div>
   </header>
-    <p class="notice"><%= notice %></p>
+    <div class="container">
+      <p class="notice"><%= flash[:notice] %></p>
     <%= yield %>
+    </div>
   </body>
 </html>

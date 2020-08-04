@@ -33,7 +33,7 @@ span {
 .body {
   margin-top: 50px;
 }
-.col-lg-12 {
+.col-xs-12 {
   width: 750px;
   margin-left: 290px;
 }
@@ -59,7 +59,13 @@ span {
 .login {
   padding-top: 40px;
 }
-
+.col-xs-3, .col-xs-9 {
+  padding-top: 50px;
+}
+.edit-book {
+  padding-top: 50px;
+  padding-right: 150px;
+}
 .notice {
   color: green;
 }
