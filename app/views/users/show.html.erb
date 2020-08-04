@@ -10,6 +10,7 @@
 </table>
 
 <% @books.each do |book| %>
-<%= book.title %>
+<%= attachment_image_tag book.user, :profile_image, :fill, 50, 50, format: 'jpeg' %>
+<%= link_to book.title, book_path(book.id) %>
 <%= book.body %>
 <% end %>
